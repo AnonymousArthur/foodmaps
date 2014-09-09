@@ -23,6 +23,6 @@
 </form>
 </table>
 <a href="phpinfo.php">PHP info</a>
-<?php include('/Users/Arthur/Sites/foodmaps/footer.html');?>
+<?php include('footer.html');?>
 </body>
 </html>
