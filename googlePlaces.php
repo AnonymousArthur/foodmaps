@@ -342,6 +342,7 @@ class googlePlaces {
 		}
 		$body = curl_exec($ch);
 		curl_close($ch);
+//echo $body;
 		return $body;
 	}
 

@@ -26,6 +26,18 @@ $results = $googlePlaces->Search();
 foreach($results['result'] as $information){
 	echo $information['name'];
 	echo '<br/>';
+	if(!empty($information['photos'])){
+		foreach($information['photos'] as $p){
+			if(!empty($p['photo_reference'])){
+				$URL = $googlePlaces->photo($p['photo_reference'],$p['height'],$p['width']);
+				$s1 = '<img src="';
+				$s2 = '">';
+				echo $s1.$URL.$s2;
+				//echo $p['photo_reference'];
+				echo '<br/><br/>';
+			}
+		}
+	}
 }
 ?>
 <a href="index.php"><button type="button">Back</button></a>
