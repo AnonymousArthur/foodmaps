@@ -2,6 +2,7 @@
 <html>
 <header>
 <title>Food Maps Prototype</title>
+<link rel="stylesheet" href="feedme.css">
 </header>
 <body>
 <h1>Food Maps Prototype v0.1 Alpha</h1>
