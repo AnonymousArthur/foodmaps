@@ -1,4 +1,11 @@
 <!DOCTYPE HTML>
+
+<?php
+session_start();
+// store session data
+$_SESSION['views']=1;
+?>
+
 <html>
 <header>
 <title>FeedMe - Results</title>
@@ -20,15 +27,15 @@ $googlePlaces->setQuery($keyword);
 $results = $googlePlaces->textSearch();
 foreach($results['result'] as $information){
 	//$linkName=str_replace(' ', '+', $information['name'])
-	echo "<a href='details.php?restaurant=",$information['name'],"'>",$information['name'],"</a>";
+	echo "<a href='details.php?restaurant=",$information['name'],"&suburb=",$searchArea,"'>",$information['name'],"</a>";
+	$_SESSION[$information['name']]['Address']=$information['formatted_address'];
+	$_SESSION[$information['name']]['icon']=$information['icon'];
 	echo '<br/>';
 	if(!empty($information['photos'])){
 		foreach($information['photos'] as $p){
 			if(!empty($p['photo_reference'])){
 				$URL = $googlePlaces->photo($p['photo_reference'],$p['height'],$p['width']);
-				$s1 = '<img src="';
-				$s2 = '">';
-				echo $s1.$URL.$s2;
+				echo '<img src="',$URL,'">';
 				echo '<br/><br/>';
 			}
 		}
