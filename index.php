@@ -7,9 +7,7 @@
 <link rel="stylesheet" href="feedme.css">
 </header>
 <body id="main">
-<div class="title">
-<h1>FeedMe</h1>
-</div>
+<?php include('title.html');?>
 <?php
 require_once('geoplugin.php');
 $geoplugin = new geoPlugin();

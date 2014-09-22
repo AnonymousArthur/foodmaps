@@ -19,3 +19,7 @@
 	width: 70px;
 	display: inline-block;
 }
+a.title-text:hover, a.title-text:active { 
+    
+    text-decoration: none;
+}
