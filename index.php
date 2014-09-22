@@ -1,29 +1,38 @@
-<!DOCTYPE html>
+<?php header("HTTP/1.1 200 OK"); ?>
+<!DOCTYPE html >
 <html>
 <header>
-<title>Food Maps Prototype</title>
+<title>FeedMe</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="feedme.css">
 </header>
-<body>
-<h1>Food Maps Prototype v0.1 Alpha</h1>
-<p>Select a function</p>
-<table border="1">
-<form action="GooglePlaceGeo.php">
-<tr>
-<td><button type="submit">Search</button></td>
-<td>Latitude: <input type="text" name="latitude"><br/>Longitude: <input type="text" name="longitude"></td>
-<td>Google Place Based on Latitude and Longitude</td>
-</tr>
-</form>
-<form action="GooglePlaceText.php">
-<tr>
-<td><button type="submit">Search</button></td>
-<td>Location: <input type="text" name="location"></td>
-<td>Google Place Based on Text</td>
-</tr>
-</form>
-</table>
-<a href="phpinfo.php">PHP info</a>
+<body id="main">
+<div class="title">
+<h1>FeedMe</h1>
+</div>
+<?php
+require_once('geoplugin.php');
+$geoplugin = new geoPlugin();
+//$geoplugin->locate('60.241.171.5');
+$geoplugin->locate();
+?>
+<div id="searchBox">
+<?php
+$location=$geoplugin->city.", ".$geoplugin->countryName;
+echo "<form action='GooglePlaceText.php'>
+<div class='searchBar'>
+<input class='form-control' type='text' name='location' placeholder='Your location' value='",$location,"'>
+</div>
+<div class='searchButton'>
+<button class='btn btn-primary' type='submit'>Search</button>
+</div>
+</form>"
+?>
+</div>
+
+
+<!--<a href="phpinfo.php">PHP info</a>-->
 <?php include('footer.html');?>
+
 </body>
 </html>

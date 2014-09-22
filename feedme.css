@@ -1,0 +1,21 @@
+#main{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#searchBox{
+	text-align: center;
+	width: 450px;
+	margin: 0 auto;
+}
+#footer{
+	text-align: center;
+}
+.searchBar{
+	width: 300px;
+	display: inline-block;
+	}
+.searchButton{
+	width: 70px;
+	display: inline-block;
+}
