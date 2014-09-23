@@ -1,5 +1,5 @@
 #main{
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -39,15 +39,18 @@ title{
 	border-bottom: #EFB718;
 	border-style: solid;	
 }
-
-img{
-	width:100%;
-	max-width:300px;
-	max-height:300px;
-	min-width:150px;
-	min-height:150px;
+.restaurantSnap{
+	height: 250px;
+	width: 250px;
 }
-div{
-	margin-top:10px;
+.restaurantName{
+	width: 250px;
+	text-align: center;
+	font-size: medium;
 }
-
+.item{
+	margin: 10px 5px;	
+}
+#container{
+	text-align: center;
+}

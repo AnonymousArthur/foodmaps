@@ -19,7 +19,7 @@ $searchArea=$_GET['location'];
 echo '<p>Restaurants near '.$searchArea.'</p>';
 ?>
 <div id="container" class="js-masonry"
-  data-masonry-options='{ "gutter": 10, "columnWidth": 150,"itemSelector": ".item" }'>
+  data-masonry-options='{ "columnWidth": 50,"itemSelector": ".item" }'>
 <?php
 $apiKey       = 'AIzaSyCX7B5mJSMLcMmbFS2lv0VnDnLSNyzI9Ns';
 $googlePlaces = new googlePlaces($apiKey);
