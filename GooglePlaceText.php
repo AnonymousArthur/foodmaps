@@ -21,7 +21,7 @@ echo '<p>Restaurants near '.$searchArea.'</p>';
 <div id="container" class="js-masonry"
   data-masonry-options='{ "columnWidth": 150,"itemSelector": ".item" }'>
 <?php
-$apiKey       = 'AIzaSyBMGzm-1zXeLX-QNi9N7ozRJWZlREyYEe4';
+$apiKey       = 'AIzaSyD_Ss7yu2RVDdflnls4vaknndHIsfIqUBE';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);
