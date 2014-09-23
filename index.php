@@ -1,4 +1,3 @@
-<?php header("HTTP/1.1 200 OK"); ?>
 <!DOCTYPE html >
 <!-- testing that I can use git, hi its jack -->
 <html>
@@ -12,8 +11,8 @@
 <?php
 require_once('geoplugin.php');
 $geoplugin = new geoPlugin();
-//$geoplugin->locate('60.241.171.5');
-$geoplugin->locate();
+$geoplugin->locate('60.241.171.5');
+//$geoplugin->locate();
 ?>
 <div id="searchBox">
 <?php
@@ -28,10 +27,7 @@ echo "<form action='GooglePlaceText.php'>
 </form>"
 ?>
 </div>
-
-
 <!--<a href="phpinfo.php">PHP info</a>-->
 <?php include('footer.html');?>
-
 </body>
 </html>
