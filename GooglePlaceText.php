@@ -4,7 +4,7 @@
 <title>FeedMe - Results</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="feedme.css">
-<script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+<script src="masonry.pkgd.js"></script>
 </header>
 <body id='main'>
 <?php include('title.html');?>
