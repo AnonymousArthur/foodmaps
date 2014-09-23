@@ -21,7 +21,7 @@ echo '<p>Restaurants near '.$searchArea.'</p>';
 <div id="container" class="js-masonry"
   data-masonry-options='{ "columnWidth": 50,"itemSelector": ".item" }'>
 <?php
-$apiKey       = 'AIzaSyBMGzm-1zXeLX-QNi9N7ozRJWZlREyYEe4';
+$apiKey       = 'AIzaSyD_Ss7yu2RVDdflnls4vaknndHIsfIqUBE';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);
@@ -37,7 +37,8 @@ foreach($results['result'] as $information){
 				$_SESSION[$information['name']]['icon']=$information['icon'];
 				//echo '<br/>';
 				$URL = $googlePlaces->photo($p['photo_reference'],$p['height'],$p['width']);
-				
+				$_SESSION[$information['name']]['URL'] = $URL;
+
 				echo '<div class="restaurantSnap">';
 				//echo '<img src="',$URL,'" "height="250" width="250">';
 				echo "<a href='details.php?restaurant=",$information['name'],"'>";

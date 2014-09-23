@@ -10,11 +10,11 @@
 <?php include('title.html');?>
 <?php
 $restaurant_name = $_GET["restaurant"];
-$suburb = $_GET["suburb"];
 session_start();
 echo $restaurant_name,"<img src=",$_SESSION[$restaurant_name]['icon'],">","<br/>";
 echo $_SESSION[$restaurant_name]['Address'];
-
+echo "<br/>";
+echo "<img src=",$_SESSION[$restaurant_name]['URL'],">";
 
 
 ?>
