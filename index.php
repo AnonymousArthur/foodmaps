@@ -12,20 +12,24 @@
 <?php
 require_once('geoplugin.php');
 $geoplugin = new geoPlugin();
-$geoplugin->locate('60.241.171.5');
-//$geoplugin->locate();
+//$geoplugin->locate('1.144.131.146');
+$geoplugin->locate();
 ?>
 <div id="searchBox">
 <?php
 $location=$geoplugin->city.", ".$geoplugin->countryName;
 echo "<form action='GooglePlaceText.php'>
-<div class='searchBar'>
-<input class='form-control' type='text' name='location' placeholder='Your location' value='",$location,"'>
-</div>
+<div class='searchBar'>";
+if ($geoplugin->city == ''){
+	echo "<input class='form-control' type='text' name='location' placeholder='We&nbsp;can&#39;t&nbsp;find you,&nbsp;please&nbsp;enter&nbsp;your&nbsp;location' >";
+}else{
+	echo "<input class='form-control' type='text' name='location' placeholder='Your location' value='",$location,"'>";
+}
+echo "</div>
 <div class='searchButton'>
 <button class='btn btn-primary' type='submit'>Search</button>
 </div>
-</form>"
+</form>";
 ?>
 </div>
 <!--<a href="phpinfo.php">PHP info</a>-->
