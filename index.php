@@ -15,6 +15,7 @@ $geoplugin = new geoPlugin();
 //$geoplugin->locate('1.144.131.146');
 $geoplugin->locate();
 ?>
+<div class="aParent">
 <div id="searchBox">
 <?php
 $location=$geoplugin->city.", ".$geoplugin->countryName;
@@ -31,6 +32,7 @@ echo "</div>
 </div>
 </form>";
 ?>
+</div>
 </div>
 <!--<a href="phpinfo.php">PHP info</a>-->
 <?php include('footer.html');?>
