@@ -12,7 +12,7 @@
 $restaurant_name = $_GET["restaurant"];
 session_start();
 echo $restaurant_name,"<img src=",$_SESSION[$restaurant_name]['icon'],">","<br/>";
-echo $_SESSION[$restaurant_name]['Address'];
+echo "<p> Address: ",$_SESSION[$restaurant_name]['Address'],"<p/>";
 echo "<br/>";
 echo "<img class='pic' src=",$_SESSION[$restaurant_name]['URL'],">";
 ?>

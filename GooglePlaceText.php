@@ -16,7 +16,7 @@ $_SESSION['views']=1;
 <?php
 require_once('googlePlaces.php');
 $searchArea=$_GET['location'];
-echo '<p>Restaurants near '.$searchArea.'</p>';
+echo '<p class="rnear">Restaurants near '.$searchArea.'</p>';
 ?>
 <div id="container" class="js-masonry"
   data-masonry-options='{ "columnWidth": 50,"itemSelector": ".item" }'>

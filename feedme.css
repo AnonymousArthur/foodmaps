@@ -37,12 +37,20 @@ body{
 	background:fixed;
 	background-image: url('http://static.wixstatic.com/media/157176afb17f2ed4238938cc188c40e8.wix_mp_srz_p_176_176_75_22_0.50_1.20_0.00_wix_mp_srz');
 }
+p.rnear{
+	color:#3A668B;
+	font-size: 25px;
+	font-weight: 100;
+		
+}
 h1{
 	text-align: center;
+	font-family: "Kelly Slab";
+	font-size: 60px;
+	
 }
 title{
 	height: 100px;
-	font-family: "Kelly Slab";
 	font-size: 80px;
 	font-weight: 100;
 	text-align: center;
