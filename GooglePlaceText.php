@@ -20,7 +20,7 @@ $_SESSION['views']=1;
 require_once('googlePlaces.php');
 $searchArea=$_GET['location'];
 echo '<p>Restaurants near '.$searchArea.'</p>';
-$apiKey       = '';
+$apiKey       = 'IzaSyD_Ss7yu2RVDdflnls4vaknndHIsfIqUBE';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);
