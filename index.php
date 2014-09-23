@@ -11,8 +11,8 @@
 <?php
 require_once('geoplugin.php');
 $geoplugin = new geoPlugin();
-//$geoplugin->locate('60.241.171.5');
-$geoplugin->locate();
+$geoplugin->locate('60.241.171.5');
+//$geoplugin->locate();
 ?>
 <div id="searchBox">
 <?php
