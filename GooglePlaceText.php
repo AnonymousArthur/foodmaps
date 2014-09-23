@@ -19,9 +19,9 @@ $searchArea=$_GET['location'];
 echo '<p>Restaurants near '.$searchArea.'</p>';
 ?>
 <div id="container" class="js-masonry"
-  data-masonry-options='{ "columnWidth": 150,"itemSelector": ".item" }'>
+  data-masonry-options='{ "gutter": 10, "columnWidth": 150,"itemSelector": ".item" }'>
 <?php
-$apiKey       = 'AIzaSyD_Ss7yu2RVDdflnls4vaknndHIsfIqUBE';
+$apiKey       = 'AIzaSyCX7B5mJSMLcMmbFS2lv0VnDnLSNyzI9Ns';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);
@@ -38,7 +38,7 @@ foreach($results['result'] as $information){
 				$_SESSION[$information['name']]['icon']=$information['icon'];
 				echo '<br/>';
 				$URL = $googlePlaces->photo($p['photo_reference'],$p['height'],$p['width']);
-				echo '<img src="',$URL,'" "height="250" width="250">';
+				echo '<img src="',$URL,'">';
 				echo '</div>';	
 			}
 		}
