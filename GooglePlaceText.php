@@ -20,21 +20,19 @@ $_SESSION['views']=1;
 require_once('googlePlaces.php');
 $searchArea=$_GET['location'];
 echo '<p>Restaurants near '.$searchArea.'</p>';
-$apiKey       = 'AIzaSyDbZH9Gk817QYnpNcq21n8w2PaDPu0QhOQ';
+$apiKey       = '';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);
 $keyword='restaurants in '.$searchArea;
 $googlePlaces->setQuery($keyword);
 $results = $googlePlaces->textSearch();
-foreach($results['result'] as $information){
-	//$linkName=str_replace(' ', '+', $information['name'])
-	
+foreach($results['result'] as $information){	
 	if(!empty($information['photos'])){
 		foreach($information['photos'] as $p){
 			if(!empty($p['photo_reference'])){
 				echo '<div class="item">';
-				echo "<a href='details.php?restaurant=",$information['name'],"&suburb=",$searchArea,"'>",$information['name'],"</a>";
+				echo "<a href='details.php?restaurant=",$information['name'],"'>",$information['name'],"</a>";
 				$_SESSION[$information['name']]['Address']=$information['formatted_address'];
 				$_SESSION[$information['name']]['icon']=$information['icon'];
 				echo '<br/>';
