@@ -4,7 +4,7 @@
 <header>
 <title>FeedMe</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="restuarant.css">
+<link rel="stylesheet" href="restaurant.css">
 </header>
 <body id="main">
 <?php include('title.html');?>
@@ -14,11 +14,8 @@ session_start();
 echo $restaurant_name,"<img src=",$_SESSION[$restaurant_name]['icon'],">","<br/>";
 echo $_SESSION[$restaurant_name]['Address'];
 echo "<br/>";
-echo "<img src=",$_SESSION[$restaurant_name]['URL'],">";
-
-
+echo "<img class='pic' src=",$_SESSION[$restaurant_name]['URL'],">";
 ?>
-
 <?php include('footer.html');?>
 </body>
 </html>
