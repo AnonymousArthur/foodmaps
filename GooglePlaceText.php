@@ -38,7 +38,7 @@ foreach($results['result'] as $information){
 				$_SESSION[$information['name']]['icon']=$information['icon'];
 				echo '<br/>';
 				$URL = $googlePlaces->photo($p['photo_reference'],$p['height'],$p['width']);
-				echo '<img src="',$URL,'">';
+				echo '<img src="',$URL,'" "height="250" width="250">';
 				echo '</div>';	
 			}
 		}
