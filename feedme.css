@@ -12,13 +12,22 @@
 	text-align: center;
 }
 .searchBar{
-	width: 300px;
+	width: 350px;
 	display: inline-block;
 	}
 .searchButton{
 	width: 70px;
-	display: inline-block;
+	/*display: inline-block;*/
+	position: relative;
+	margin-top: -10px; 
 }
+
+.aParent div {
+	float: center;
+	clear: none;
+	margin: 0 auto; 
+}
+
 a.title-text:hover, a.title-text:active { 
     
     text-decoration: none;
@@ -27,6 +36,9 @@ body{
 	scroll:yes;
 	background:fixed;
 	background-image: url('http://static.wixstatic.com/media/157176afb17f2ed4238938cc188c40e8.wix_mp_srz_p_176_176_75_22_0.50_1.20_0.00_wix_mp_srz');
+}
+h1{
+	text-align: center;
 }
 title{
 	height: 100px;
