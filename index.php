@@ -1,12 +1,12 @@
 <!DOCTYPE html >
 <!-- testing that I can use git, hi its jack -->
 <html>
-<header>
+<head>
 <title>FeedMe</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="feedme.css">
 <script src="masonry.pkgd.js"></script>
-</header>
+</head>
 <body id="main">
 <?php include('title.html');?>
 <?php

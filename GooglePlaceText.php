@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="feedme.css">
 <script src="masonry.pkgd.js"></script>
-</header>
+</head>
 <body id='main'>
 <?php include('title.html');?>
 <?php
@@ -21,7 +21,7 @@ echo '<p class="rnear">Restaurants near '.$searchArea.'</p>';
 <div id="container" class="js-masonry"
   data-masonry-options='{ "columnWidth": 50,"itemSelector": ".item" }'>
 <?php
-$apiKey       = 'AIzaSyD_Ss7yu2RVDdflnls4vaknndHIsfIqUBE';
+$apiKey       = 'AIzaSyDbZH9Gk817QYnpNcq21n8w2PaDPu0QhOQ';
 $googlePlaces = new googlePlaces($apiKey);
 
 $googlePlaces->setRadius(2000);

@@ -5,7 +5,7 @@
 <title>FeedMe</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="restaurant.css">
-</header>
+</head>
 <body id="main">
 <?php include('title.html');?>
 <?php
